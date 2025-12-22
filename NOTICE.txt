@@ -1,0 +1,13 @@
+Jada Examples <https://github.com/pdfclown/jada-examples>
+Copyright 2025 Stefano Chizzolini and others
+License MIT-0 <https://spdx.org/licenses/MIT-0.html>
+
+
+This product reuses source code from third-party projects [1]:
+
+Evolving-Protozoa <https://github.com/DylanCope/Evolving-Protozoa>
+Copyright 2023 Dylan Cope
+License MIT <https://spdx.org/licenses/MIT.html>
+
+---
+[1] Traceable via SPDX tags (glob: SPDX-*CopyrightText:*)

@@ -1,0 +1,9 @@
+@import url("resources/styles/custom.css");
+
+h1.title:not([title]):only-child {
+  background-size: 300px;
+}
+h1.title:not([title]):only-child:before {
+  height: 193px;
+  width: 0;
+}

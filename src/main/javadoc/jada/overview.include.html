@@ -1,0 +1,73 @@
+<html>
+  <body>
+    <p>This is part of a demonstration of Jada doclet and its extension model:</p>
+    <ul>
+      <li>
+        <b>Jada doclet</b> (<code>jada-core</code> module):
+        <ul>
+          <li>
+            <code>Jada</code> doclet configuration (see "<code>jada-core</code>" dependency and
+            related configuration in root pom.xml of the jada-demo project)
+          </li>
+          <li>
+            core Javadoc tags for pre- and post-processing:
+            <ul>
+              <li>
+                <code>@jada.doc</code> and <code>@jada.reuseDoc</code> — Javadoc fragments reuse.<br />
+                Useful to share content fragments, for example, horizontally among method overloads
+                (analogous to what the standard <code>@inheritDoc</code> tag does vertically for
+                inheritable elements).
+              </li>
+              <li>
+                <code>@jada.include</code> – external Javadoc fragments inclusion.<br />
+                Useful to share external content fragments among arbitrary Javadoc pages.
+              </li>
+              <li>
+                <code>@jada.render</code> – specialized Javadoc renderers<br />
+                Useful to transform data through specialized content filters.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>JadaBiblio extension</b> (<code>jada-biblio</code> module) for automatic bibliography
+        rendering and citation linking:
+        <ul>
+          <li>
+            configuration (see "<code>jada-biblio</code>" dependency and related configuration in
+            root pom.xml of the jada-demo project)
+          </li>
+          <li>
+            bibliographic Javadoc tags:
+            <ul>
+              <li><code>@biblio.spec</code> — specification reference</li>
+              <li><code>@biblio.doc</code> – other publication reference</li>
+              <li>
+                <code>@biblio.ref</code> – online resource reference (such as issues on an
+                issue-tracking system)
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>JadaUML extension</b> (<code>jada-uml</code> module) for UML diagrams rendering:
+        <ul>
+          <li>
+            configuration (see "<code>jada-uml</code>" dependency and related configuration in root
+            pom.xml of the jada-demo project)
+          </li>
+          <li>
+            UML diagrams:
+            <ul>
+              <li>dependency diagrams</li>
+              <li>package diagrams</li>
+              <li>class diagrams</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

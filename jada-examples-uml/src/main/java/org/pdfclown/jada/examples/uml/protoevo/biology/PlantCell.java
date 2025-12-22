@@ -1,0 +1,151 @@
+/*
+  SPDX-FileCopyrightText: © 2023 Dylan Cope
+
+  SPDX-License-Identifier: MIT
+
+  Changes: package renamed for jada-examples-uml
+*/
+package org.pdfclown.jada.examples.uml.protoevo.biology;
+
+import java.awt.*;
+import java.util.Iterator;
+import java.util.Map;
+import org.pdfclown.jada.examples.uml.protoevo.core.ChunkManager;
+import org.pdfclown.jada.examples.uml.protoevo.core.Particle;
+import org.pdfclown.jada.examples.uml.protoevo.core.Settings;
+import org.pdfclown.jada.examples.uml.protoevo.core.Simulation;
+import org.pdfclown.jada.examples.uml.protoevo.env.Tank;
+import org.pdfclown.jada.examples.uml.protoevo.utils.Vector2;
+
+/**
+ * @author Dylan Cope
+ */
+public class PlantCell extends EdibleCell {
+  public static final long serialVersionUID = -3975433688803760076L;
+
+  private static float randomPlantRadius() {
+    float range = Settings.maxPlantBirthRadius - Settings.minPlantBirthRadius;
+    return Settings.minPlantBirthRadius + range * Simulation.RANDOM.nextFloat();
+  }
+
+  private final float maxRadius;
+  private float crowdingFactor;
+  private final float plantAttractionFactor;
+  private final Vector2 force = new Vector2(0, 0);
+  private float crowdingFactorTime = 0;
+  private float crowdingFactorFreq = 30f;
+
+  private float plantGrowth = 0;
+
+  public PlantCell(Tank tank) {
+    this(randomPlantRadius(), tank);
+  }
+
+  public PlantCell(float radius, Tank tank) {
+    super(radius, Food.Type.Plant, tank);
+    setGrowthRate((float) (Settings.minPlantGrowth
+        + Settings.plantGrowthRange * Simulation.RANDOM.nextDouble()));
+
+    float range = Settings.maxPlantBirthRadius - radius;
+    maxRadius = (float) (radius + range * Simulation.RANDOM.nextDouble());
+
+    setHealthyColour(new Color(
+        30 + Simulation.RANDOM.nextInt(105),
+        150 + Simulation.RANDOM.nextInt(100),
+        10 + Simulation.RANDOM.nextInt(100)));
+    plantAttractionFactor = 5e-8f;
+  }
+
+  public int burstMultiplier() {
+    return 200;
+  }
+
+  public float getCrowdingFactor() {
+    return crowdingFactor;
+  }
+
+  /**
+   * <a href="https://www.desmos.com/calculator/hmhjwdk0jc">Desmos Graph</a>
+   *
+   * @return The growth rate based on the crowding and current radius.
+   */
+  @Override
+  public float getGrowthRate() {
+    return plantGrowth;
+  }
+
+  @Override
+  public String getPrettyName() {
+    return "Plant";
+  }
+
+  public Map<String, Float> getStats() {
+    Map<String, Float> stats = super.getStats();
+    stats.put("Crowding Factor", crowdingFactor);
+    stats.put("Split Radius", Settings.statsDistanceScalar * maxRadius);
+    return stats;
+  }
+
+  @Override
+  public boolean handlePotentialCollision(Particle p, float delta) {
+    boolean collision = super.handlePotentialCollision(p, delta);
+    if (p != this && p instanceof PlantCell) {
+      PlantCell otherPlant = (PlantCell) p;
+      force.set(p.getPos()).take(getPos());
+      float sqDist = force.len2();
+      float r = getRadius() + otherPlant.getRadius();
+      if (sqDist > 1.01f * r * r && !isAttached(otherPlant)) {
+        force.setLength(plantAttractionFactor / sqDist);
+        accelerate(force.scale(1 / getMass()));
+      }
+    }
+    return collision;
+  }
+
+  @Override
+  public void update(float delta) {
+    super.update(delta);
+
+    if (isDead())
+      return;
+
+    crowdingFactorTime += delta;
+    if (crowdingFactorTime > crowdingFactorFreq * delta) {
+      crowdingFactor = 0;
+      ChunkManager chunkManager = getTank().getChunkManager();
+      Iterator<Cell> entities = chunkManager.broadEntityDetection(getPos(), getRadius());
+      entities.forEachRemaining(this::updateCrowding);
+      crowdingFactorTime = 0;
+
+      float x = (-getCrowdingFactor() + Settings.plantCriticalCrowding)
+          / Settings.plantCrowdingGrowthDecay;
+      x = (float) (Math.tanh(x));// * Math.tanh(-0.01 + 50 * getCrowdingFactor() / Settings.plantCriticalCrowding));
+      x = x < 0 ? (float) (1 - Math.exp(-Settings.plantCrowdingGrowthDecay * x)) : x;
+      plantGrowth = super.getGrowthRate() * x;
+      if (getRadius() > maxRadius)
+        plantGrowth *= Math.exp(maxRadius - getRadius());
+      plantGrowth = plantGrowth > 0 ? plantGrowth * getHealth() : plantGrowth;
+    }
+
+    if (getGrowthRate() < 0f)
+      setHealth(getHealth() + Settings.plantRegen * delta * getGrowthRate());
+
+    addConstructionMass(delta);
+    addAvailableEnergy(delta / 3f);
+
+    if (shouldSplit())
+      burst(PlantCell.class, r -> new PlantCell(r, getTank()));
+  }
+
+  private boolean shouldSplit() {
+    return getRadius() > maxRadius &&
+        getHealth() > Settings.minHealthToSplit;
+  }
+
+  private void updateCrowding(Cell e) {
+    float sqDist = e.getPos().squareDistanceTo(getPos());
+    if (sqDist < Math.pow(3 * getRadius(), 2)) {
+      crowdingFactor += e.getRadius() / (getRadius() + sqDist);
+    }
+  }
+}

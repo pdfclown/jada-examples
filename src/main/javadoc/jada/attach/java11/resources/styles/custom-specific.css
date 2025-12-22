@@ -1,0 +1,378 @@
+/*
+ * DEFAULT-STYLESHEET CUSTOMIZATION - JAVA 11-SPECIFIC
+ */
+
+html {
+  scroll-padding-top: 85px;
+}
+
+body {
+  background-color: initial;
+}
+
+dd {
+  font-family: inherit !important;
+  margin: revert !important;
+}
+
+p {
+  margin: 10px 0;
+}
+
+div.block td,
+div.block th {
+  border: 1px solid grey;
+  padding: 1em;
+}
+
+.fixedNav {
+  background-color: black;
+}
+
+.bottomNav,
+.topNav {
+  background-color: #4072b1;
+  height: auto;
+  padding: 0;
+}
+
+ul.navList,
+ul.nav-list {
+  margin: 0;
+  padding: 0;
+}
+
+.navBarCell1Rev {
+  background-color: #f8981d;
+  margin: 0;
+}
+
+.overviewSummary caption span,
+.memberSummary caption span,
+.typeSummary caption span,
+.useSummary caption span,
+.constantsSummary caption span,
+.deprecatedSummary caption span,
+.requiresSummary caption span,
+.packagesSummary caption span,
+.providesSummary caption span,
+.usesSummary caption span {
+  background-color: #f8981d;
+}
+
+.memberSummary caption span.tableTab span,
+.packagesSummary caption span.tableTab span,
+.overviewSummary caption span.tableTab span,
+.typeSummary caption span.tableTab span {
+  background-color: #4072b1;
+}
+
+ul.navList li,
+ul.nav-list li {
+  margin: 0;
+  padding: 7px 15px;
+}
+
+.navPadding {
+  padding-top: 70px !important;
+}
+
+.description pre {
+  margin-top: 1em;
+}
+
+div.block {
+  font-family: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+div.block > span.descfrmTypeLabel,
+span.descfrmTypeLabel > code {
+  font-size: smaller;
+}
+
+div.block:has(span.descfrmTypeLabel) {
+  color: #4e4e4e;
+  margin-bottom: 10px;
+}
+
+.contentContainer .description dl dt,
+.contentContainer .details dl dt,
+.serializedFormContainer dl dt {
+  font-size: smaller;
+  margin-bottom: 0.25em;
+}
+
+.subNav {
+  background-color: #bdd0e8;
+}
+
+.subNav div {
+  padding: 0;
+}
+
+ul.subNavList {
+  padding: 5px 15px;
+}
+
+main {
+  padding: 0 20px;
+}
+
+.header {
+  margin: 0;
+}
+
+.contentContainer,
+.sourceContainer,
+.classUseContainer,
+.serializedFormContainer,
+.constantValuesContainer,
+.allClassesContainer,
+.allPackagesContainer {
+  padding: 5px 0;
+}
+
+ul.blockList li.blockList,
+ul.blockListLast li.blockList {
+  line-height: 1.2;
+}
+
+ul.blockList ul.blockList li.blockList,
+ul.blockList ul.blockListLast li.blockList {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+}
+
+section > ul.blockList > li.blockList,
+section > ul.blockListLast > li.blockList {
+  margin-top: 50px;
+}
+
+ul.blockList ul.blockList li.blockList h3 {
+  border: 0 !important;
+  text-align: center;
+}
+
+ul.blockList ul.blockList ul.blockList li.blockList,
+ul.blockList ul.blockList ul.blockListLast li.blockList {
+  background-color: inherit;
+  padding: 0 0 0 8px;
+}
+
+/*
+ * Headings within member details (e.g., within a method)
+ */
+ul.blockList ul.blockList ul.blockList li.blockList h3 {
+  background-color: transparent;
+  border: 0;
+}
+div.details ul.blockList ul.blockList ul.blockList li.blockList h4,
+div.details ul.blockList ul.blockList ul.blockListLast li.blockList h4 {
+  background-color: transparent;
+  border: 0;
+}
+
+/*
+ * Section headings (e.g., "Methods")
+ */
+ul.blockList ul.blockList ul.blockList li.blockList > h3 {
+  background-color: #869ab2;
+  color: white;
+  font-size: 13px;
+  margin: 0 0 6px -8px;
+  padding: 7px 10px;
+  text-align: left !important;
+}
+div.details ul.blockList ul.blockList ul.blockList li.blockList > h4,
+div.details ul.blockList ul.blockList ul.blockListLast li.blockList > h4 {
+  background-color: #869ab2;
+  border: 0;
+  color: white;
+  font-size: 13px;
+  margin: 0 0 6px -8px;
+  padding: 7px 10px;
+}
+
+a[name]::before,
+a[name]:target,
+a[id]::before,
+a[id]:target {
+  display: inherit;
+}
+
+#allclasses_navbar_top,
+#skip\.navbar\.top,
+#allclasses_navbar_bottom,
+#skip\.navbar\.bottom {
+  display: none !important;
+}
+
+.memberSummary caption span.tableTab span,
+.packagesSummary caption span.tableTab span,
+.overviewSummary caption span.tableTab span,
+.typeSummary caption span.tableTab span {
+  height: auto;
+  padding: 5px 20px;
+}
+
+.memberSummary caption span.activeTableTab span,
+.packagesSummary caption span.activeTableTab span,
+.overviewSummary caption span.activeTableTab span,
+.typeSummary caption span.activeTableTab span {
+  height: auto;
+  padding: 5px 20px;
+}
+
+.overviewSummary caption span,
+.memberSummary caption span,
+.typeSummary caption span,
+.useSummary caption span,
+.constantsSummary caption span,
+.deprecatedSummary caption span,
+.requiresSummary caption span,
+.packagesSummary caption span,
+.providesSummary caption span,
+.usesSummary caption span {
+  height: auto;
+  padding: 5px 20px;
+}
+
+th.colFirst,
+th.colSecond,
+th.colLast,
+th.colConstructorName,
+th.colDeprecatedItemName,
+.useSummary th,
+.constantsSummary th,
+.packagesSummary th,
+td.colFirst,
+td.colSecond,
+td.colLast,
+.useSummary td,
+.constantsSummary td {
+  background-color: #869ab2;
+  color: white;
+  padding: 7px 5px;
+}
+
+th.colFirst,
+th.colSecond,
+th.colLast,
+th.colConstructorName,
+th.colDeprecatedItemName,
+.useSummary th,
+.constantsSummary th,
+.packagesSummary th,
+td.colFirst,
+td.colSecond,
+td.colLast,
+.useSummary td,
+.constantsSummary td {
+  vertical-align: middle;
+}
+
+.overviewSummary td.colFirst,
+.overviewSummary th.colFirst,
+.requiresSummary td.colFirst,
+.requiresSummary th.colFirst,
+.packagesSummary td.colFirst,
+.packagesSummary td.colSecond,
+.packagesSummary th.colFirst,
+.packagesSummary th,
+.usesSummary td.colFirst,
+.usesSummary th.colFirst,
+.providesSummary td.colFirst,
+.providesSummary th.colFirst,
+.memberSummary td.colFirst,
+.memberSummary th.colFirst,
+.memberSummary td.colSecond,
+.memberSummary th.colSecond,
+.memberSummary th.colConstructorName,
+.typeSummary td.colFirst,
+.typeSummary th.colFirst {
+  vertical-align: middle;
+}
+
+td.colFirst,
+th.colFirst {
+  padding: 3px 10px !important;
+}
+
+.overviewSummary td,
+.memberSummary td,
+.typeSummary td,
+.useSummary td,
+.constantsSummary td,
+.deprecatedSummary td,
+.requiresSummary td,
+.packagesSummary td,
+.providesSummary td,
+.usesSummary td {
+  padding: 3px 5px !important;
+}
+
+li.blockList > pre {
+  font-size: 15px;
+}
+
+.altColor,
+.altColor td,
+.altColor th {
+  background-color: inherit;
+  color: inherit;
+  border-top: 1px #b0b0b0 solid;
+}
+
+.rowColor,
+.rowColor td,
+.rowColor th {
+  background-color: inherit;
+  color: inherit;
+  border-top: 1px #b0b0b0 solid;
+}
+
+.overviewSummary,
+.memberSummary,
+.typeSummary,
+.useSummary,
+.constantsSummary,
+.deprecatedSummary,
+.requiresSummary,
+.packagesSummary,
+.providesSummary,
+.usesSummary {
+  border: 0;
+}
+
+.overviewSummary caption,
+.memberSummary caption,
+.typeSummary caption,
+.useSummary caption,
+.constantsSummary caption,
+.deprecatedSummary caption,
+.requiresSummary caption,
+.packagesSummary caption,
+.providesSummary caption,
+.usesSummary caption {
+  padding: 0;
+}
+
+ul.navListSearch li {
+  padding: 3px 15px 0;
+}
+
+#reset {
+  background-color: transparent;
+}
+
+.legalCopy {
+  margin: 0;
+  padding: 5px 10px 10px;
+}
+
+.ui-autocomplete-category {
+  background-color: #4072b1;
+}

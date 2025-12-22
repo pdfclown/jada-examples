@@ -1,0 +1,133 @@
+/*
+ * DEFAULT-STYLESHEET CUSTOMIZATION - CROSS-VERSION
+ */
+
+body {
+  color: inherit;
+  font-family: sans-serif;
+  line-height: 1.3;
+}
+
+caption {
+  font-variant-caps: small-caps;
+  margin: 1em;
+}
+
+cite {
+  font-size: smaller;
+  font-style: normal;
+}
+
+dt {
+  margin-top: 0.25em;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h1.title:not([title]):only-child {
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  font-size: 32px;
+}
+
+h1.title:not([title]):only-child:before {
+  content: "";
+  display: inline-block;
+  height: 80px;
+  vertical-align: middle;
+  width: 90px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 15px;
+  font-style: italic;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+li > p {
+  margin: 0;
+}
+
+pre {
+  font-family: monospace;
+  margin: 1em;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: center;
+}
+
+.header-top {
+  padding: 3px 10px;
+}
+
+.footer-right {
+  float: right;
+}
+
+.important {
+  background-color: yellow;
+  color: black;
+}
+
+.warning {
+  color: red;
+}
+
+#all-packages-table {
+  margin-top: 2em;
+}
+
+/*
+ * Code highlight (PrismJS)
+ */
+pre[data-line] {
+  padding: 1em 0 1em 2em !important;
+}
+.line-highlight {
+  background-color: #ffff0020 !important;
+}
+
+/*
+ * Bibliography (JadaBiblio)
+ */
+.biblio-author {
+  font-variant: small-caps;
+}
+.biblio-resources-extra {
+  font-size: smaller;
+}
+
+/*
+ * UML diagrams (JadaUML)
+ */
+.uml {
+  margin: 1em 0;
+}
+.uml-class {
+  margin-left: 1em;
+}

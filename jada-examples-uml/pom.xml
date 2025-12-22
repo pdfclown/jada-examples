@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.pdfclown</groupId>
+    <artifactId>jada-examples</artifactId>
+    <version>${revision}</version>
+  </parent>
+
+  <artifactId>jada-examples-uml</artifactId>
+
+  <url>${projectRootUrl}</url>
+
+  <properties>
+    <rootdir>${basedir}/..</rootdir>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.github.javafaker</groupId>
+      <artifactId>javafaker</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>31.1-jre</version>
+    </dependency>
+    <dependency>
+      <groupId>org.yaml</groupId>
+      <artifactId>snakeyaml</artifactId>
+      <version>1.21</version>
+      <classifier>android</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <!--
+            DOCLET
+          -->
+          <doclet>org.pdfclown.jada.core.Jada</doclet>
+          <docletArtifacts>
+            <!-- UML extension -->
+            <docletArtifact>
+              <groupId>org.pdfclown</groupId>
+              <artifactId>jada-uml</artifactId>
+              <version>${jada.version}</version>
+            </docletArtifact>
+          </docletArtifacts>
+          <additionalJOptions>
+            <additionalJOption>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</additionalJOption>
+            <additionalJOption>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</additionalJOption>
+            <additionalJOption>-J--add-exports=jdk.javadoc/jdk.javadoc.internal.tool=ALL-UNNAMED</additionalJOption>
+          </additionalJOptions>
+          <additionalOptions>
+            <additionalOption>--jada-dir ${rootdir}/src/main/javadoc/jada</additionalOption>
+            <additionalOption>--jada-exts JadaUML</additionalOption>
+            <additionalOption>--add-stylesheet "${rootdir}/src/main/javadoc/stylesheet-ext.css"</additionalOption>
+
+            <!--
+              TIP: Uncomment the following <additionalOption> to list all the available options. -->
+            <!--<additionalOption>-help</additionalOption>-->
+          </additionalOptions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

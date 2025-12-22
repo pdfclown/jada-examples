@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.pdfclown</groupId>
+    <artifactId>pdfclown-common-base</artifactId>
+    <version>0.2.0</version>
+  </parent>
+
+  <artifactId>jada-examples</artifactId>
+  <version>${revision}</version>
+  <packaging>pom</packaging>
+
+  <name>${project.artifactId}</name>
+  <description>Examples demonstrating functionalities of Jada, an extendable Javadoc doclet.</description>
+  <url>${projectRootUrl}</url>
+  <inceptionYear>2025</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>MIT-0</name>
+      <url>https://spdx.org/licenses/MIT-0.html</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>stechio</id>
+      <name>Stefano Chizzolini</name>
+      <url>https://stefanochizzolini.it</url>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <modules>
+    <module>jada-examples-basic</module>
+    <module>jada-examples-biblio</module>
+    <module>jada-examples-docreuse</module>
+    <module>jada-examples-include</module>
+    <module>jada-examples-script</module>
+    <module>jada-examples-uml</module>
+  </modules>
+
+  <properties>
+    <!--
+      OVERRIDDEN PROPERTIES
+    -->
+    <projectUrlBasePath>github.com/pdfclown/jada-examples</projectUrlBasePath>
+
+    <!--
+      CUSTOM PROPERTIES
+    -->
+
+    <!--
+      VERSIONS
+    -->
+    <!--
+      TIP: Uncomment to set another Jada version.
+    -->
+    <!-- <jada.version>0.1.0</jada.version>-->
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <configuration
+              combine.self="override">
+            <!--
+              CONTENTS (layout and resources)
+            -->
+            <bottom><![CDATA[
+<span class="footer-right">${buildTimestamp} (${git.commit.id.describe})</span>
+<span>Copyright &#169; {inceptionYear}&#x2013;{currentYear} {organizationName}. All rights reserved.<br>
+<a href="${project.url}">Project Home</a> | <a href="${projectScmUrl}">Source Repository</a> | <a href="${projectIssuesUrl}">Report a bug or suggest an enhancement</a></span>
+]]></bottom>
+
+            <nohelp>true</nohelp>
+            <noindex>false</noindex>
+            <!-- Suppress hidden timestamp for reproducible build. -->
+            <notimestamp>true</notimestamp>
+
+            <!--
+              NOTE: Workaround to `-no-fonts` flag automatically added because of toolchain handling
+              issue (the plugin wrongly evaluates the tool JDK version instead of the build JDK
+              version, despite it's the latter to generate the javadoc - see also
+              <https://github.com/apache/maven-javadoc-plugin/issues/1244>). -->
+            <disableNoFonts>true</disableNoFonts>
+
+            <!--
+              SYSTEM
+            -->
+            <!--
+              - `-missing`: missing comments are ignored
+              - `-html`: HTML 5 check is disabled, as it wrongly prohibits legal data attributes
+                (e.g., `<pre data-line="5"><code>` used by Prism code highlighter) — see also
+                <https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes>
+              - `-accessibility`: accessibility is disabled, as it weirdly interferes with things
+                like heading tags (<h*>); in particular, after java 11, <h3> is
+                forbidden <https://bugs.openjdk.org/browse/JDK-8223552>
+            -->
+            <doclint>all,-missing,-accessibility</doclint>
+            <!--
+              NOTE: `debug` parameter preserves the argument files ("options", "argfile") generated
+              at runtime by the plugin to feed the javadoc CLI tool (see also
+              <https://maven.apache.org/plugins/maven-javadoc-plugin/faq.html>); this way, they can
+              be reused for debugging purposes (for example, by the JadaDebug utility). -->
+            <debug>true</debug>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

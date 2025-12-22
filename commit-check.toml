@@ -1,0 +1,17 @@
+#
+# pre-commit check-branch configuration
+# <https://github.com/commit-check/commit-check>
+#
+[branch]
+# See <docs/maintenance.md#branches> for more information.
+conventional_branch = true
+allow_branch_types = [
+    "build", "bump",
+    "chore", "ci",
+    "dependabot", "docs",
+    "feat", "fix",
+    "perf",
+    "r", "refactor", "release", "revert",
+    "style",
+    "test"
+]

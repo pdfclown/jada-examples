@@ -1,0 +1,1 @@
+This is the root folder of Jada configuration: see the other `jada-examples-*` modules for more complex use cases.
