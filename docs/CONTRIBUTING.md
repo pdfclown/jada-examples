@@ -8,7 +8,7 @@ In case the code in the repository doesn't seem to work as expected, please foll
 
 1. **check if the issue has already been reported** — use the [GitHub Issues](https://github.com/pdfclown/jada-examples/issues) search
 
-2. **check if the issue has already been fixed** — try to reproduce it using the latest unreleased [codebase](https://github.com/pdfclown/jada-examples/blob/main/docs/building.md#setup) (to build): check out the relevant branch (`main` for current development, or `r/`-prefixed (e.g., `r/1.5`) for release maintenance) in the repository and [build it](https://github.com/pdfclown/jada-examples/blob/main/docs/building.md#building) by yourself
+2. **check if the issue has already been fixed** — try to reproduce it using the latest unreleased codebase: [check out](https://github.com/pdfclown/jada-examples/blob/main/docs/building.md#setup) the relevant branch (`main` for current development, or `r/`-prefixed (e.g., `r/1.5`) for release maintenance) in the repository and [build it](https://github.com/pdfclown/jada-examples/blob/main/docs/building.md#building) by yourself
 
 3. **isolate the problem** — reduce your case to the bare minimum which still demonstrates the problem (ideally, create a test case)
 
@@ -41,22 +41,22 @@ In case you want to contribute improvements to the code in the repository, pleas
    > ./mvnw spotless:apply
    > ```
 
-5. **write tests** — *the tests ensure that each method, class, etc. does what it is expected to do according to its specification*. This is critically important when other changes are made to ensure that existing code is not broken (no regression). Just as important, whenever someone is new to a section of code, they should be able to read the tests to get a thorough understanding of what it does and why.
+5. **write tests** — whenever appropriate in the demo code, *the tests ensure that each method, class, etc. does what it is expected to do according to its specification*. This is critically important when other changes are made to ensure that existing code is not broken (no regression). Just as important, whenever someone is new to a section of code, they should be able to read the tests to get a thorough understanding of what it does and why.
 
    - if you are **fixing a bug**, you should add tests to ensure that your code has actually fixed the bug, to specify/describe what the code is doing, and to ensure the bug doesn't happen again (you may need to change existing tests if they were inaccurate)
    - if you are **adding a feature**, you should add tests to specify/describe what the code is doing, and to ensure future changes won't alter its behavior
 
 6. **update the documentation** — the documentation has to be updated for users to know that things have been changed
-7. **execute a full build** — run a full installation before submitting your pull request, to ensure your changes build successfully:
+7. **execute a full build** — run it before submitting your pull request, to ensure your changes build successfully:
    ```shell
-   ./mvnw clean install -Pfull
+   ./mvnw clean verify
    ```
 8. **submit your pull request** — see ["Creating a pull request from a fork"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
    - the title of your pull request MUST follow the corresponding [convention](https://github.com/pdfclown/pdfclown-common/blob/main/docs/common/maintenance.md#pull-requests)
 
 ## License
 
-By contributing your code, you agree to license your contribution under the [GNU Lesser General Public License (LGPL) version 3.0](https://github.com/pdfclown/jada-examples/blob/main/LICENSE.txt) (`LGPL-3.0-only`).
+By contributing your code, you agree to license your contribution under the [MIT No Attribution](https://github.com/pdfclown/jada-examples/blob/main/LICENSE.txt) (`MIT-0`).
 
 By contributing to the documentation, you agree to license your contribution under the [Creative Commons Attribution-ShareAlike 4.0 License](https://github.com/pdfclown/jada-examples/blob/main/LICENSES/CC-BY-SA-4.0.txt) (`CC-BY-SA-4.0`).
 

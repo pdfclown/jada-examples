@@ -48,7 +48,7 @@ I dutifully honored all these points:
 
 Legal stuff:
 
-- [ ] I hereby declare this contribution to be licensed under the [GNU Lesser General Public License (LGPL) version 3.0](https://github.com/pdfclown/jada-examples/blob/main/LICENSE.txt) (`LGPL-3.0-only`) for the code, and [Creative Commons Attribution-ShareAlike 4.0 License](https://github.com/pdfclown/jada-examples/blob/main/LICENSES/CC-BY-SA-4.0.txt) (`CC-BY-SA-4.0`) for the documentation
+- [ ] I hereby declare this contribution to be licensed under the [MIT No Attribution](https://github.com/pdfclown/jada-examples/blob/main/LICENSE.txt) (`MIT-0`) for the code, and [Creative Commons Attribution-ShareAlike 4.0 License](https://github.com/pdfclown/jada-examples/blob/main/LICENSES/CC-BY-SA-4.0.txt) (`CC-BY-SA-4.0`) for the documentation
 
 ## Solved issues
 
