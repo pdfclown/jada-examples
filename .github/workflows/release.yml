@@ -24,11 +24,11 @@ jobs:
       - name: Create GitHub Release (draft)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$tag" \
+          gh release create "$RELEASE_TAG" \
               --repo="$GITHUB_REPOSITORY" \
-              --title="$REPO_TITLE ${tag#v}" \
+              --title="$REPO_TITLE ${RELEASE_TAG#v}" \
               --generate-notes \
               --fail-on-no-commits \
               --draft
