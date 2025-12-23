@@ -7,13 +7,18 @@
 [![build](https://img.shields.io/github/actions/workflow/status/pdfclown/jada-examples/build.yml?branch=main&label=build%20%28main%29)](https://github.com/pdfclown/jada-examples/actions/workflows/build.yml)
 [![REUSE status](https://api.reuse.software/badge/github.com/pdfclown/jada-examples)](https://api.reuse.software/info/github.com/pdfclown/jada-examples)
 
-This is a demonstrative project for **[Jada doclet](https://github.com/pdfclown/jada)**, an extensible [Javadoc doclet](https://docs.oracle.com/en/java/javase/17/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.html) enabling users to combine an arbitrary doclet with multiple pre/post-processors in order to transform its output in more flexible and convenient ways.
+This is a demonstrative project for **[Jada doclet](https://github.com/pdfclown/jada)**, an extensible [Javadoc doclet](https://docs.oracle.com/en/java/javase/17/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.html) combining an arbitrary doclet with multiple pre/post-processors in order to transform its output in more flexible and convenient ways.
 
-Along with its core functionalities, there are also examples for its extensions:
+Available examples:
 
-- [JadaBiblio](jada-examples-biblio) extension (bibliography inside Javadoc)
-- [JadaMaven](jada-examples-docreuse) plugin (Javadoc fragments reuse)
-- [JadaUML](jada-examples-uml) extension (UML diagrams inside Javadoc)
+- [Basic](jada-examples-basic)
+- Content composition:
+  - [Javadoc fragments reuse](jada-examples-docreuse)
+  - [Javadoc fragments inclusion](jada-examples-include)
+- Extensions:
+  - [Bibliography extension](jada-examples-biblio) (bibliography inside Javadoc)
+  - [UML extension](jada-examples-uml) (UML diagrams inside Javadoc)
+  - [Jada extension scripting](jada-examples-script) (extending Jada through scripting)
 
 ## Usage
 
