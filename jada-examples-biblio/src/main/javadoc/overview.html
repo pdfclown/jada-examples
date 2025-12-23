@@ -1,5 +1,35 @@
 <html>
   <body>
-    <p>This module demonstrates JadaBiblio, a Jada extension for bibliography rendering.</p>
+    <p>
+      This module demonstrates how to use
+      <a href="https://github.com/pdfclown/jada/tree/main/jada-biblio">JadaBiblio</a>, a Jada doclet
+      extension for bibliography rendering in Javadoc.
+    </p>
+    <p>Please note that the bibliographic entries come from multiple sources:</p>
+    <ol>
+      <li>
+        <code
+          ><a
+            href="https://github.com/pdfclown/jada-examples/blob/main/src/main/javadoc/jada/ext/JadaBiblio/biblio.xml"
+            >/jada-examples/src/main/javadoc/jada/ext/JadaBiblio/biblio.xml</a
+          ></code
+        >
+      </li>
+      <li>
+        <code
+          ><a
+            href="https://github.com/pdfclown/jada-examples/blob/main/jada-examples-biblio/src/main/javadoc/jada/ext/JadaBiblio/biblio.xml"
+            >/jada-examples/jada-examples-biblio/src/main/javadoc/jada/ext/JadaBiblio/biblio.xml</a
+          ></code
+        >
+      </li>
+    </ol>
+    <p>
+      Besides file-system sources, bibliographic entries can come from resource dependecies on
+      classpath too — this is a core feature of Jada doclet, available to any extension. The
+      resource directories are configured via <code>--jada-dir</code> option, prioritized according
+      to their inverse order of definition (that is, the last one has the highest priority) — this
+      behavior is useful to override a resource with a more specific one of the same name.
+    </p>
   </body>
 </html>

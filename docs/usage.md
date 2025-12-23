@@ -1,6 +1,6 @@
-[Jada Examples :: Documentation](README.md) >
+Jada Examples > [Documentation](README.md) >
 
-# Jada Examples :: Usage
+# Usage
 
 This document describes how to use Jada Examples.
 

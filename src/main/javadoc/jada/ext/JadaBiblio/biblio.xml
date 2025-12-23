@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<biblio
+  xmlns="https://pdfclown.org/ns/biblio"
+  version="1.0">
+  <spec
+    id="PDF"
+    title="Portable Document Format">
+    <version
+      id="1.0"
+      year="1993"
+      edition="1"
+      title="Portable Document Format Reference Manual"
+      author="Bienz, Cohn (Adobe Systems Inc)"
+      publisher="Addison-Wesley"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.0.pdf"/>
+    <version
+      id="1.1"
+      year="1996"
+      edition="1"
+      title="Portable Document Format Reference Manual"
+      author="Bienz, Cohn, Meehan (Adobe Systems Inc)"
+      publisher="Adobe Systems Inc"
+      src="https://archive.org/download/Portable-Pocument-Format-Reference-Manual-Version-1.1.ISBN_0-201-62628-4/Portable-Pocument-Format-Reference-Manual-Version-1.1.ISBN_0-201-62628-4.pdf"/>
+    <version
+      id="1.2"
+      year="1996"
+      edition="1 (revised)"
+      title="Portable Document Format Reference Manual"
+      author="Bienz, Cohn, Meehan (Adobe Systems Inc)"
+      publisher="Adobe Systems Inc"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.2.pdf"/>
+    <version
+      id="1.3"
+      year="2000"
+      edition="2"
+      title="Portable Document Format Reference Manual"
+      author="Adobe Systems Inc"
+      publisher="Addison-Wesley"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.3.pdf"/>
+    <version
+      id="1.4"
+      year="2001"
+      edition="3"
+      title="Portable Document Format Reference Manual"
+      author="Adobe Systems Inc"
+      publisher="Addison-Wesley"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.4.pdf"/>
+    <version
+      id="1.5"
+      year="2003"
+      edition="4"
+      title="PDF Reference - Adobe® Portable Document Format"
+      publisher="Adobe Systems Inc"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.5_v6.pdf"/>
+    <version
+      id="1.6"
+      year="2004"
+      edition="5"
+      title="PDF Reference - Adobe® Portable Document Format"
+      publisher="Adobe Systems Inc"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.6.pdf"/>
+    <version
+      id="1.7~ADB"
+      year="2006"
+      edition="6"
+      title="PDF Reference - Adobe® Portable Document Format"
+      publisher="Adobe Systems Inc"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.7old.pdf"/>
+    <version
+      id="1.7"
+      name="ISO 32000-1"
+      year="2008"
+      title="Portable Document Format, part 1"
+      publisher="ISO"
+      url="https://www.iso.org/standard/51502.html"
+      src="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf"/>
+    <version
+      id="2.0"
+      name="ISO 32000-2"
+      year="2020"
+      title="Portable Document Format, part 2"
+      publisher="ISO"
+      url="https://www.iso.org/standard/75839.html"/>
+  </spec>
+  <spec
+    id="PDF-A"
+    name="ISO 19005"
+    title="Electronic document file format for long-term preservation (PDF/A)">
+    <see url="https://pdfa.org/resource/iso-19005-pdfa/"/>
+    <part
+      id="1"
+      name="ISO 19005-1"
+      year="2005"
+      title="Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1)"
+      publisher="ISO"
+      url="https://www.iso.org/standard/38920.html"/>
+    <part
+      id="2"
+      name="ISO 19005-2"
+      year="2011"
+      title="Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2)"
+      publisher="ISO"
+      url="https://www.iso.org/standard/50655.html"/>
+    <part
+      id="3"
+      name="ISO 19005-3"
+      year="2012"
+      title="Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3)"
+      publisher="ISO"
+      url="https://www.iso.org/standard/57229.html"/>
+    <part
+      id="4"
+      name="ISO 19005-4"
+      year="2020"
+      title="Electronic document file format for long-term preservation — Part 4: Use of ISO 32000-2 (PDF/A-4)"
+      publisher="ISO"
+      url="https://www.iso.org/standard/71832.html"/>
+  </spec>
+  <spec
+    id="PDF-E"
+    name="ISO 24517"
+    title="Engineering document format using PDF (PDF/E)"
+    publisher="ISO">
+    <see url="https://pdfa.org/resource/iso-24517-pdfe/"/>
+  </spec>
+  <spec
+    id="PDF-TAG"
+    name="ISO TS 32005"
+    year="2023"
+    title="PDF 1.7 and 2.0 structure namespace inclusion in ISO 32000-2"
+    publisher="ISO"
+    url="https://www.iso.org/standard/45878.html"/>
+  <spec
+    id="PDF-UA"
+    name="ISO 14289"
+    title="Electronic document file format enhancement for accessibility (PDF/UA)">
+    <see url="https://pdfa.org/resource/iso-14289-pdfua/"/>
+    <part
+      id="1"
+      name="ISO 14289-1"
+      year="2014"
+      title="Electronic document file format enhancement for accessibility — Part 1: Use of ISO 32000-1 (PDF/UA-1)"
+      publisher="ISO"
+      url="https://www.iso.org/standard/64599.html"/>
+    <part
+      id="2"
+      name="ISO 14289-2"
+      year="2024"
+      title="Electronic document file format enhancement for accessibility — Part 2: Use of ISO 32000-2 (PDF/UA-2)"
+      publisher="ISO"
+      url="https://www.iso.org/standard/82278.html"/>
+  </spec>
+  <spec
+    id="PDF-X"
+    name="ISO 15930"
+    title="Prepress digital data exchange — Use of PDF (PDF/X)"
+    publisher="ISO">
+    <see url="https://pdfa.org/resource/iso-15930-pdfx/"/>
+  </spec>
+  <spec
+    id="PS"
+    year="1999"
+    edition="3"
+    title="PostScript Language Reference"
+    author="Adobe Systems Inc"
+    publisher="Addison-Wesley"
+    src="https://www.adobe.com/jp/print/postscript/pdfs/PLRM.pdf"/>
+
+  <doc
+    id="ITA"
+    year="2001"
+    edition="2"
+    title="Introduction to Algorithms"
+    author="Cormen, Leiserson, Rivest, Stein"
+    publisher="MIT Press">
+    <see url="http://en.wikipedia.org/wiki/Introduction_to_Algorithms"/>
+  </doc>
+
+  <ref
+    id="PDF-ISSUE"
+    title="PDF 2.0 Issues"
+    url="https://github.com/pdf-association/pdf-issues/issues/{}"/>
+</biblio>
