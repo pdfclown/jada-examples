@@ -115,6 +115,15 @@
               be reused for debugging purposes (for example, by the JadaDebug utility). -->
             <debug>true</debug>
           </configuration>
+          <executions>
+            <execution>
+              <id>generate-javadoc</id>
+              <goals>
+                <goal>javadoc-no-fork</goal>
+              </goals>
+              <phase>package</phase>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
