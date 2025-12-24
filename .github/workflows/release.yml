@@ -1,34 +1,34 @@
 #
-# On pushed release tags, creates a GitHub Release draft.
+# On demand, publishes the provided release version to GitHub Release.
 #
-# NOTE: Generated notes are configured via `.github/release.yml`.
+# Maintainers' post-activities:
+# 1. the RELEASE BRANCH is automatically created to include release preparation commits: verify and
+#    merge it to `main`, and finally discard it.
+# 2. the GITHUB RELEASE is created as draft: verify and publish it.
+#
+# NOTE: No release component is published, as this project is internal.
 #
 name: Release
 
 on:
-  push:
-    tags:
-      - v*
-
-permissions:
-  contents: write
-
-env:
-  REPO_TITLE: 'Jada Examples'
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: 'Version to release (semver2)'
+        type: string
+        required: true
+      scm_startpoint:
+        description: 'Release branch start point (by default, main HEAD)'
+        type: string
+        required: false
 
 jobs:
   release:
-    name: Release pushed tag
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create GitHub Release (draft)
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_TAG: ${{ github.ref_name }}
-        run: |
-          gh release create "$RELEASE_TAG" \
-              --repo="$GITHUB_REPOSITORY" \
-              --title="$REPO_TITLE ${RELEASE_TAG#v}" \
-              --generate-notes \
-              --fail-on-no-commits \
-              --draft
+    uses: pdfclown/.github/.github/workflows/release.yml@main
+    permissions:
+      contents: write
+    with:
+      revision: ${{ inputs.revision }}
+      scm_startpoint: ${{ inputs.scm_startpoint }}
+      repo_title: 'Jada Examples'
+    secrets: inherit
