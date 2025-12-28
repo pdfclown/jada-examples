@@ -107,7 +107,7 @@ public abstract class Cell extends Particle implements Serializable {
         children.add(child);
       } catch (MiscarriageException ignored) {
       }
-      angle += 2 * Math.PI / nChildren;
+      angle += (float) (2 * Math.PI / nChildren);
     }
 
     for (int j = 0; j < 8; j++)

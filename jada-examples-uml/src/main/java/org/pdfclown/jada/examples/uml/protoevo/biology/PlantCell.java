@@ -123,7 +123,7 @@ public class PlantCell extends EdibleCell {
       x = x < 0 ? (float) (1 - Math.exp(-Settings.plantCrowdingGrowthDecay * x)) : x;
       plantGrowth = super.getGrowthRate() * x;
       if (getRadius() > maxRadius)
-        plantGrowth *= Math.exp(maxRadius - getRadius());
+        plantGrowth *= (float) Math.exp(maxRadius - getRadius());
       plantGrowth = plantGrowth > 0 ? plantGrowth * getHealth() : plantGrowth;
     }
 

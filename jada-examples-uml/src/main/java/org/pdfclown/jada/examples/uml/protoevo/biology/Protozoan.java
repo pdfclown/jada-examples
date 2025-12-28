@@ -173,7 +173,7 @@ public class Protozoan extends Cell {
     float extraction = 1f;
     if (e instanceof PlantCell) {
       if (spikes.length > 0)
-        extraction *= Math.pow(Settings.spikePlantConsumptionPenalty, spikes.length);
+        extraction *= (float) Math.pow(Settings.spikePlantConsumptionPenalty, spikes.length);
       extraction *= herbivoreFactor;
     } else if (e instanceof MeatCell) {
       extraction /= herbivoreFactor;

@@ -178,7 +178,7 @@ public class MainScreenRenderer extends Canvas {
   public void paint(Graphics g) {
     Graphics2D graphics = (Graphics2D) g;
 
-    time += 0.1;
+    time += 0.1F;
     int backgroundR = 25 + (int) (5 * Math.cos(time / 100.0));
     int backgroundG = 35 + (int) (20 * Math.sin(time / 100.0));
     int backgroundB = 45 + (int) (15 * Math.cos(time / 100.0 + 1));

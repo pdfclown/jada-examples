@@ -76,7 +76,7 @@ public class SimulationRenderer extends Canvas {
   }
 
   public void background(Graphics2D graphics) {
-    time += 0.1;
+    time += 0.1F;
     int backgroundR = 25 + (int) (5 * Math.cos(time / 100.0));
     int backgroundG = 40 + (int) (30 * Math.sin(time / 100.0));
     int backgroundB = 35 + (int) (15 * Math.cos(time / 100.0 + 1));
