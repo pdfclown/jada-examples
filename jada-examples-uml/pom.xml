@@ -20,6 +20,15 @@
   </properties>
 
   <dependencies>
+    <!--
+      NOTE: org.apache.commons:commons-lang3 overrides the vulnerable dependency of
+      com.github.javafaker:javafaker -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.20.0</version>
+    </dependency>
+
     <dependency>
       <groupId>com.github.javafaker</groupId>
       <artifactId>javafaker</artifactId>
