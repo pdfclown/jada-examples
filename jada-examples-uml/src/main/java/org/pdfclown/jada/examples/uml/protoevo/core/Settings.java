@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
@@ -157,7 +158,7 @@ public final class Settings {
     } catch (FileNotFoundException e) {
       throw new RuntimeException(e);
     }
-    Yaml yaml = new Yaml(new Constructor(Settings.class));
+    Yaml yaml = new Yaml(new Constructor(Settings.class, new LoaderOptions()));
     return yaml.load(inputStream);
   }
 
