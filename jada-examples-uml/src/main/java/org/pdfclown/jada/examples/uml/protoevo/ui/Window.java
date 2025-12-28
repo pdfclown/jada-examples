@@ -17,6 +17,7 @@ import java.io.InputStream;
 import javax.swing.*;
 import org.pdfclown.jada.examples.uml.protoevo.ui.components.Input;
 import org.pdfclown.jada.examples.uml.protoevo.utils.Vector2;
+import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
@@ -43,7 +44,7 @@ public class Window extends Canvas implements Runnable, ActionListener {
       } catch (FileNotFoundException e) {
         throw new RuntimeException(e);
       }
-      Yaml yaml = new Yaml(new Constructor(WindowConfig.class));
+      Yaml yaml = new Yaml(new Constructor(WindowConfig.class, new LoaderOptions()));
       return yaml.load(inputStream);
     }
 
