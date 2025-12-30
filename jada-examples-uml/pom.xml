@@ -63,25 +63,25 @@
           <doclet>org.pdfclown.jada.core.Jada</doclet>
           <docletArtifacts>
             <!-- UML extension -->
-            <docletArtifact>
+            <artifact>
               <groupId>org.pdfclown</groupId>
               <artifactId>jada-uml</artifactId>
               <version>${jada.version}</version>
-            </docletArtifact>
+            </artifact>
           </docletArtifacts>
           <additionalJOptions>
-            <additionalJOption>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</additionalJOption>
-            <additionalJOption>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</additionalJOption>
-            <additionalJOption>-J--add-exports=jdk.javadoc/jdk.javadoc.internal.tool=ALL-UNNAMED</additionalJOption>
+            <option>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</option>
+            <option>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</option>
+            <option>-J--add-exports=jdk.javadoc/jdk.javadoc.internal.tool=ALL-UNNAMED</option>
           </additionalJOptions>
           <additionalOptions>
-            <additionalOption>--jada-dir ${rootdir}/src/main/javadoc/jada</additionalOption>
-            <additionalOption>--jada-exts JadaUML</additionalOption>
-            <additionalOption>--add-stylesheet "${rootdir}/src/main/javadoc/stylesheet-ext.css"</additionalOption>
+            <option>--jada-dir ${rootdir}/src/main/javadoc/jada</option>
+            <option>--jada-exts JadaUML</option>
+            <option>--add-stylesheet "${rootdir}/src/main/javadoc/stylesheet-ext.css"</option>
 
             <!--
-              TIP: Uncomment the following <additionalOption> to list all the available options. -->
-            <!--<additionalOption>-help</additionalOption>-->
+              TIP: Uncomment the following <option> to list all the available options. -->
+            <!--<option>-help</option>-->
           </additionalOptions>
         </configuration>
       </plugin>
