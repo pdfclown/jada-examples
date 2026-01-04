@@ -1,5 +1,5 @@
 Jada Examples <https://github.com/pdfclown/jada-examples>
-Copyright 2025 Stefano Chizzolini and others
+Copyright 2025-2026 Stefano Chizzolini and others
 License MIT-0 <https://spdx.org/licenses/MIT-0.html>
 
 

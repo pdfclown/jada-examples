@@ -7,7 +7,7 @@ version = 1
 # Source code and configuration.
 [[annotations]]
 path = ["**/*"]
-SPDX-FileCopyrightText = "2025 Stefano Chizzolini and contributors"
+SPDX-FileCopyrightText = "2025-2026 Stefano Chizzolini and contributors"
 SPDX-License-Identifier = "MIT-0"
 
 # Documentation (licensing).
@@ -16,13 +16,13 @@ SPDX-License-Identifier = "MIT-0"
 [[annotations]]
 path = ["NOTICE.txt"]
 precedence = "override"
-SPDX-FileCopyrightText = "2025 Stefano Chizzolini and contributors"
+SPDX-FileCopyrightText = "2025-2026 Stefano Chizzolini and contributors"
 SPDX-License-Identifier = "CC0-1.0"
 
 # Documentation and media resources.
 [[annotations]]
 path = ["**/*.md", "**/*.jpg", "**/*.png", "**/*.svg"]
-SPDX-FileCopyrightText = "2025 Stefano Chizzolini and contributors"
+SPDX-FileCopyrightText = "2025-2026 Stefano Chizzolini and contributors"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
 # Tools.

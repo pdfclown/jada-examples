@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: © 2023 Dylan Cope
+  SPDX-FileCopyrightText: 2023 Dylan Cope
 
   SPDX-License-Identifier: MIT
 
