@@ -4,10 +4,14 @@
 </picture><br>Jada Examples
 </h1>
 
+<div align="center">
+
+*Usage examples for **[Jada doclet](https://github.com/pdfclown/jada)***
+
 [![build](https://img.shields.io/github/actions/workflow/status/pdfclown/jada-examples/build.yml?branch=main&label=build%20%28main%29)](https://github.com/pdfclown/jada-examples/actions/workflows/build.yml)
 [![REUSE status](https://api.reuse.software/badge/github.com/pdfclown/jada-examples)](https://api.reuse.software/info/github.com/pdfclown/jada-examples)
 
-This is a demonstrative project for **[Jada doclet](https://github.com/pdfclown/jada)**, an extensible [Javadoc doclet](https://docs.oracle.com/en/java/javase/17/docs/api/jdk.javadoc/jdk/javadoc/doclet/Doclet.html) combining an arbitrary doclet with multiple pre/post-processors in order to transform its output in more flexible and convenient ways.
+</div>
 
 Available examples:
 

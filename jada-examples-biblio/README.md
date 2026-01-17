@@ -1,4 +1,4 @@
-[Jada Examples](../README.md) >
+[Jada Examples](..) >
 
 # Bibliography extension example
 
