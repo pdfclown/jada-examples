@@ -1,3 +1,10 @@
+## v0.1.2 (2026-03-03)
+
+### Fix
+
+- **deps**: bump org.pdfclown:pdfclown-common-base from 0.5.0 to 0.6.0
+- **deps**: bump org.pdfclown:pdfclown-common-base from 0.4.0 to 0.5.0
+
 ## v0.1.1 (2026-01-11)
 
 ### Fix
