@@ -15,14 +15,15 @@
 
 Available examples:
 
-- [Basic](jada-examples-basic)
+- [Basic](jada-examples-basic/README.md)
 - Content composition:
-  - [Javadoc fragments reuse](jada-examples-docreuse)
-  - [Javadoc fragments inclusion](jada-examples-include)
-- Extensions:
-  - [Bibliography extension](jada-examples-biblio) (bibliography inside Javadoc)
-  - [UML extension](jada-examples-uml) (UML diagrams inside Javadoc)
-  - [Jada scripting](jada-examples-script) (extending Jada through scripting)
+  - [Javadoc fragments reuse](jada-examples-docreuse/README.md)
+  - [Javadoc fragments inclusion](jada-examples-include/README.md)
+- Additional features:
+  - Extensions:
+    - [Bibliography extension](jada-examples-biblio/README.md) (bibliography inside Javadoc)
+    - [UML extension](jada-examples-uml/README.md) (UML diagrams inside Javadoc)
+  - [Jada scripting](jada-examples-script/README.md) (extending Jada through scripting)
 
 ## Usage
 

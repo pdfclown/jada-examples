@@ -1,4 +1,4 @@
-[Jada Examples](..) >
+[Jada Examples](../README.md) >
 
 # Javadoc fragments inclusion example
 

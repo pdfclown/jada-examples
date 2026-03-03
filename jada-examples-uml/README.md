@@ -1,4 +1,4 @@
-[Jada Examples](..) >
+[Jada Examples](../README.md) >
 
 # UML extension example
 
