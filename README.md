@@ -23,7 +23,7 @@ Available examples:
   - Extensions:
     - [Bibliography extension](jada-examples-biblio/README.md) (bibliography inside Javadoc)
     - [UML extension](jada-examples-uml/README.md) (UML diagrams inside Javadoc)
-  - [Jada scripting](jada-examples-script/README.md) (extending Jada through scripting)
+  - [Scripting](jada-examples-script/README.md) (extending Jada via script hooks)
 
 ## Usage
 
