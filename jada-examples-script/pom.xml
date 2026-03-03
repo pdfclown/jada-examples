@@ -44,7 +44,6 @@
           <additionalOptions>
             <option>--jada-dir ${rootdir}/src/main/javadoc/jada</option>
             <option>--jada-dir ${basedir}/src/main/javadoc/jada</option>
-            <option>--jada-exts ScriptDemoExtension</option>
             <option>--add-stylesheet "${rootdir}/src/main/javadoc/stylesheet-ext.css"</option>
 
             <!--
