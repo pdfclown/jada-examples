@@ -8,7 +8,8 @@
 
 *Usage examples for **[Jada doclet](https://github.com/pdfclown/jada)***
 
-[![build](https://img.shields.io/github/actions/workflow/status/pdfclown/jada-examples/build.yml?branch=main&label=build%20%28main%29)](https://github.com/pdfclown/jada-examples/actions/workflows/build.yml)
+[![JDK Compatibility](https://img.shields.io/badge/Java-17-blue)](https://openjdk.org/projects/jdk/17/)<br>
+[![build](https://img.shields.io/github/actions/workflow/status/pdfclown/jada-examples/build.yml?branch=main&label=build)](https://github.com/pdfclown/jada-examples/actions/workflows/build.yml)
 [![REUSE status](https://api.reuse.software/badge/github.com/pdfclown/jada-examples)](https://api.reuse.software/info/github.com/pdfclown/jada-examples)
 
 </div>
