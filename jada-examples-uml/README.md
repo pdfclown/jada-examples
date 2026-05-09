@@ -2,7 +2,7 @@
 
 # UML extension example
 
-This module demonstrates [JadaUML](https://github.com/pdfclown/jada/tree/main/jada-uml), a Jada doclet extension for UML diagrams rendering in Javadoc.
+*Demonstrates [JadaUML](https://github.com/pdfclown/jada/tree/main/jada-uml), a Jada doclet extension for UML diagrams rendering in Javadoc*
 
 As a real-world example, this module embeds the source code of
 [Evolving-Protozoa](https://github.com/DylanCope/Evolving-Protozoa), a mesmerizing

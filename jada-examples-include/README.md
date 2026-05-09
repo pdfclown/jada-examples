@@ -2,7 +2,7 @@
 
 # Javadoc fragments inclusion example
 
-This module demonstrates how to use <code>[@include](https://github.com/pdfclown/jada/blob/main/jada-core/src/main/java/org/pdfclown/jada/core/taglet/IncludeTaglet.java)</code> Jada taglet to include Javadoc fragments from other files.
+*Demonstrates how to use <code>[@include](https://github.com/pdfclown/jada/blob/main/jada-core/src/main/java/org/pdfclown/jada/core/taglet/IncludeTaglet.java)</code> Jada taglet to include Javadoc fragments from other files*
 
 Such inclusion is also an interesting demonstration of <b>hierarchical resource selection</b> in Jada. The resource directories are configured via `--jada-dir` option, prioritized according to their inverse order of definition (that is, the last one has the highest priority) — this behavior is useful to override a resource with a more specific one of the same name. In this
 example, we defined two resource directories:

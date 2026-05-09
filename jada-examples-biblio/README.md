@@ -2,7 +2,7 @@
 
 # Bibliography extension example
 
-This module demonstrates how to use [JadaBiblio](https://github.com/pdfclown/jada/tree/main/jada-biblio), a Jada doclet extension for bibliography rendering in Javadoc.
+*Demonstrates how to use [JadaBiblio](https://github.com/pdfclown/jada/tree/main/jada-biblio), a Jada doclet extension for bibliography rendering in Javadoc*
 
 Please note that the bibliographic entries come from multiple sources:
 
