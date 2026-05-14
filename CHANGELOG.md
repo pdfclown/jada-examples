@@ -1,3 +1,11 @@
+## v0.1.3 (2026-05-14)
+
+### Fix
+
+- **deps**: bump org.pdfclown:pdfclown-common-base from 0.6.0 to 0.8.0 (#10)
+- **deps**: bump com.google.guava:guava from 33.5.0-jre to 33.6.0-jre (#8)
+- **deps**: bump org.yaml:snakeyaml from 2.5 to 2.6 (#7)
+
 ## v0.1.2 (2026-03-03)
 
 ### Fix
