@@ -42,7 +42,7 @@ See [Documentation](docs/README.md) for further information about this project.
 
 This project is licensed under **[MIT No Attribution](LICENSE.txt)**.
 
-See [NOTICE](NOTICE.txt) for attributions.
+See [CREDITS](CREDITS.txt) for attributions.
 
 See [REUSE compliance report](https://api.reuse.software/info/github.com/pdfclown/jada-examples) for detailed licensing and copyright information.
 

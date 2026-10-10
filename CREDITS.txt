@@ -1,0 +1,23 @@
+Jada Examples <https://github.com/pdfclown/jada-examples>
+Copyright 2025-2026 Stefano Chizzolini and others
+License MIT-0 <https://spdx.org/licenses/MIT-0.html>
+
+-----------------------------------------------------------------------
+
+THIRD-PARTY SOURCE CODE AND RESOURCES
+
+This project reuses source code from third-party projects listed here
+below; module-level README files may provide further details whenever
+appropriate.
+
+This project contains resources from third parties for demonstration
+purposes. Their use is regulated by their respective licenses and does
+NOT imply any endorsement to this project by their copyright holders.
+
+For full SBOM, run `reuse spdx` on the command line.
+
+-----------------------------------------------------------------------
+
+Evolving-Protozoa <https://github.com/DylanCope/Evolving-Protozoa>
+Copyright 2023 Dylan Cope
+License MIT <https://spdx.org/licenses/MIT.html>
