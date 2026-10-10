@@ -17,4 +17,4 @@ Generate the Javadoc output (under `target/reports/apidocs` of respective module
 > ```shell
 > python3 -m http.server %PORT% -d %JAVADOC_OUTPUT_PATH%
 > ```
-> Once the web server is running, use your browser to navigate to `http://localhost:8000/` (replace `8000` with the port you set on server start).
+> Once the web server is running, use your browser to navigate to `http://localhost:%PORT%/`.
